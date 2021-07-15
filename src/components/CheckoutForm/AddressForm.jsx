@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@material-ui/core';
-import { useForm, FormProvider } from 'react-hook-form';
+import {  useForm, FormProvider } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 import { commerce } from '../../lib/commerce';
@@ -13,9 +13,9 @@ const AddressForm = ({ checkoutToken, next }) => {
   const [shippingSubdivision, setShippingSubdivision] = useState('');
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState('');
-  const methods = useForm();
+  const methods = useForm()
 
-  const fetchShippingCountries = async (checkoutTokenId,) => {
+  const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(checkoutTokenId);
 
     setShippingCountries(countries);
@@ -80,7 +80,6 @@ const AddressForm = ({ checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
-
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Options</InputLabel>
               <Select value={shippingOption} fullWidth onChange={(e) => setShippingOption(e.target.value)}>
@@ -92,7 +91,6 @@ const AddressForm = ({ checkoutToken, next }) => {
               </Select>
             </Grid>
           </Grid>
-
           <br />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <Button component={Link} variant="outlined" to="/cart">Back to Cart</Button>

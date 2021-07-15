@@ -16,7 +16,7 @@ const CartItem = ( {item, onUpdateCartQty, onRemoveFromCart} ) => {
             <CardActions className = {classes.CardActions}>
                 <div className = {classes.cardActions}>
                     <Button type = "button" size = "small" onClick = {()=>onUpdateCartQty(item.id, item.quantity - 1)}>-</Button>
-                    {console.log(item.quantity)}
+  
                     <typography>{item.quantity}</typography>
                     <Button type = "button" size = "small" onClick = {()=>onUpdateCartQty(item.id, item.quantity + 1)}>+</Button>
                 </div>

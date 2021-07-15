@@ -4,22 +4,21 @@ import { TextField, Grid } from '@material-ui/core';
 
 const FormInput = ({name, label, required}) => {
     const { control } = useFormContext();
+    const isError = false;
+
     return (
         <Grid item xs = {12} sm={6}>
         <Controller
+        defaultValue =''
         name={name}
         control={control}
-        render = {()=> (
-                    <TextField
-                        fullWidth
-                        label={label}
-                        required
-                    />
-                )}
-      />
+        render={({ field }) => ( 
+                <TextField {...field} label={label} required={required}/>)}
+        />
      
             
         </Grid>
+    
     )
 }
 
