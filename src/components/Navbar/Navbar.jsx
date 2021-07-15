@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core'
+import { AppBar, Toolbar, IconButton, Badge, Typography } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
 import {Link, useLocation} from 'react-router-dom'
 
@@ -16,7 +16,7 @@ const Navbar = ({totalItems}) => {
                 <Toolbar>
                     <Typography component = {Link}  to = '/' variant = "h6" className={classes.title} color = "inherit">
                         <img src = "https://freepikpsd.com/media/2019/10/shop-png-icon-1-Transparent-Images.png" alt = "Commerce.js" height = "25px" className = {classes.imgage} />
-                        Emazon
+                        Elmazon
                     </Typography>
                     <div className = {classes.grow} />
                     {location.pathname === '/' && (
