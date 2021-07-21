@@ -11,6 +11,7 @@ const Product = ({product, onAddToCart}) => {
     return (
         <Card className = {classes.root}>
             <CardMedia className = {classes.media} image = {product.media.source} title = {product.name} />
+
             <CardContent>
                 <div className = {classes.cardContent}>
                     <Typography variant = "h5" gutterBottom>
@@ -21,18 +22,13 @@ const Product = ({product, onAddToCart}) => {
                     </Typography>
                 </div>
                      <Typography dangerouslySetInnerHTML={{ __html: product.description }} variant = "body2" color="textSecondary" />
-                  
-                    
-               
-
             </CardContent>
+
             <CardActions disbleSpacing className = {classes.cardActions}>
                 <IconButton aria-label = "Add to Card" onClick = {()=>onAddToCart(product.id, 1)}>
                     <AddShoppingCart />
                 </IconButton>
-            </CardActions>
-
-            
+            </CardActions>   
         </Card>
     )
 }

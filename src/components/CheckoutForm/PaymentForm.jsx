@@ -13,9 +13,11 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
     event.preventDefault();
 
     if (!stripe || !elements) return;
-
+    //Use Element instances to collect sensitive information in your payment forms
     const cardElement = elements.getElement(CardElement);
-
+    
+    //convert payment information collected by elements into a PaymentMethod
+    //payment method: https://stripe.com/docs/api/payment_methods/object
     const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: cardElement });
 
     if (error) {
@@ -34,8 +36,7 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
           },
         },
       };
-      console.log(orderData)
-
+    
       onCaptureCheckout(checkoutToken.id, orderData);
 
       nextStep();
