@@ -10,8 +10,8 @@ const CartItem = ( {item, onUpdateCartQty, onRemoveFromCart} ) => {
         <Card>
             <CardMedia image = {item.media.source} alt = {item.name} className = {classes.media}/>
             <CardContent className = {classes.cardContent}>
-                <Typography variant = 'h4'>{item.name}</Typography>
-                <Typography variant = 'h5'>{item.line_total.formatted_with_symbol}</Typography>
+                <div variant = 'h6'>{item.name}</div>
+                <div variant = 'h6'>{item.line_total.formatted_with_symbol}</div>
             </CardContent>
             <CardActions className = {classes.CardActions}>
                 <div className = {classes.cardActions}>

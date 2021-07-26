@@ -3,23 +3,31 @@ import Grid from '@material-ui/core/Grid';
 
 import Product from './Product/Product'
 import useStyles from './styles'
+import Banner from './Banner'
+import YoutubeEmbed from './YoutubeEmbed'
 
 
 const Products = ( {products, onAddToCart} ) => {
     const classes = useStyles()
     return (
-        <main className = {classes.content}>
+        <>
+        <div className = {classes.toolbar} />
+        <Banner /> 
+        <div height = "600px" />
+        <main className = {classes.root}> 
             <div className = {classes.content}/>
-            <Grid container justify = "center" spacing = {4}>
+            <Grid container justifyContent = "center" spacing = {2}>
                 {products.map(product => (
-                    <Grid item key = {product.id} xs = {12} sm = {6} md = {4} large = {3}>
+                    <Grid item key = {product.id} xs = {12} sm = {6} md = {3} large = {3}>
                         <Product product = {product} onAddToCart ={onAddToCart}/>
                     </Grid>
                 ))}
-
             </Grid>
             
         </main>
+        <YoutubeEmbed embedId="1CRihg1X89A" />
+        </>
+
     )
 }
 

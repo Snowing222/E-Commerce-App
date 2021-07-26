@@ -2,8 +2,11 @@ import React, {useState, useEffect} from 'react'
 // import Products from './components/Products'
 // import Navbar from './components/Navbar/Navbar'
 import {commerce} from './lib/commerce'
-import {Products, Navbar, Cart, Checkout} from './components'
+import {Products, Navbar, Cart, Checkout, ProductDetail} from './components'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { CssBaseline } from '@material-ui/core'
+import './App.css'
+
 
 
 const App = () => {
@@ -74,12 +77,14 @@ const App = () => {
 
     return (
         <Router>
-            <div>
+          
+            <div style = {{overflow: "hidden"}}>
                 <Navbar totalItems = {cart.total_items} />
                 <Switch>
                     <Route exact path = "/">
                         <Products products = {products} onAddToCart = {handleAddToCart} />  
                     </Route>
+                    
                     <Route exact path = '/cart'>
                     <Cart 
                     cart = {cart}  
@@ -90,6 +95,10 @@ const App = () => {
                     </Route>
                     <Route exact path = '/checkout'>
                         <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />
+                    </Route>
+
+                    <Route path = '/:id'>
+                        <ProductDetail products = {products} onAddToCart = {handleAddToCart}/>
                     </Route>
                 </Switch>
             </div>

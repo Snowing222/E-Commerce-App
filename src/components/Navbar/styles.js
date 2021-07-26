@@ -11,15 +11,18 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
+
   title: {
-    flexGrow: 1,
-    alignItems: 'center',
-    display: 'flex',
     textDecoration: 'none',
+    flexGrow: 1,
+    textAlign: 'center',
+    letterSpacing: 2,
+    fontFamily: 'Monospace',
+    fontSize: 45,
+    fontWeight: 'bold'
   },
-  image: {
-    marginRight: '10px',
-  },
+
+
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
@@ -29,6 +32,7 @@ export default makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,

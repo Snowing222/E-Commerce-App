@@ -17,7 +17,7 @@ const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptur
     const cardElement = elements.getElement(CardElement);
     
     //convert payment information collected by elements into a PaymentMethod
-    //payment method: https://stripe.com/docs/api/payment_methods/object
+    //payment method: https://stripe.com/docs/api/payment_methods/object => billing info, card info
     const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: cardElement });
 
     if (error) {

@@ -3,7 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   title: {
-    marginTop: '5%',
+    marginTop: '2%',
+    marginBottom: '2%',
+    fontFamily: 'Playfair Display',
+    fontWeight: 'bold',
+    fontSize: "45px"
   },
   emptyButton: {
     minWidth: '150px',
@@ -25,5 +29,9 @@ export default makeStyles((theme) => ({
     marginTop: '10%',
     width: '100%',
     justifyContent: 'space-between',
+    fontFamily: 'Playfair Display',
+    fontWeight: "bold",
+    fontSize: "30px"
+
   },
 }));
