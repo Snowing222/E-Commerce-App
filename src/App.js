@@ -6,6 +6,7 @@ import {Products, Navbar, Cart, Checkout, ProductDetail} from './components'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { CssBaseline } from '@material-ui/core'
 import './App.css'
+import { Container } from '@material-ui/core';
 
 
 
@@ -78,7 +79,7 @@ const App = () => {
     return (
         <Router>
           
-            <div style = {{overflow: "hidden"}}>
+            <Container style = {{overflow: "hidden"}}>
                 <Navbar totalItems = {cart.total_items} />
                 <Switch>
                     <Route exact path = "/">
@@ -101,7 +102,7 @@ const App = () => {
                         <ProductDetail products = {products} onAddToCart = {handleAddToCart}/>
                     </Route>
                 </Switch>
-            </div>
+            </Container>
         </Router>
     )
 }

@@ -26,14 +26,13 @@ export default makeStyles(() => ({
 
   imageDetail:{
     width: '100%',
-    height: '576px',
-    marginLeft: '80px',
-    marginTop: '20px'
+    // height: '576px',
+    marginBottom:"30px"
   },
   imageContent:{
-    paddingTop:"35px",
-    paddingLeft:"80px",
-    paddingRight: '80px',
+    // paddingTop:"35px",
+    // paddingLeft:"80px",
+    // paddingRight: '80px',
     fontSize: 'larger',
     justifyContent: 'space-between',
     fontFamily: 'Playfair Display'
@@ -55,13 +54,15 @@ export default makeStyles(() => ({
   button:{
     margin: "0 auto",
     alignItems: 'center',
-    backgroundColor: "pink"
+    backgroundColor: "pink",
+    marginBottom: "25px"
 
   },
 
   beforeGrid:{
     paddingTop: "80px",
     paddingLeft: "30px",
+    paddingBottom: "25px",
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',

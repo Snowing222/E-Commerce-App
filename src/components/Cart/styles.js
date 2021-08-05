@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     marginBottom: '2%',
     fontFamily: 'Playfair Display',
     fontWeight: 'bold',
-    fontSize: "45px"
+    fontSize: "30px"
   },
   emptyButton: {
     minWidth: '150px',
@@ -31,7 +31,7 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     fontFamily: 'Playfair Display',
     fontWeight: "bold",
-    fontSize: "30px"
+    fontSize: "25px"
 
   },
 }));

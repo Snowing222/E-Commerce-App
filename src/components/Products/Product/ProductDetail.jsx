@@ -19,17 +19,16 @@ const ProductDetail = ({match, products, onAddToCart}) => {
     </div>
     </Link>
    
-    <Grid container justifyContent = "center" >
-        <Grid item xs = {12} sm = {6} md = {6} large = {7}>
+    <Grid container justifyContent = "center" spacing = {5} >
+        <Grid item xs = {10} sm = {10} md = {5} large = {7}>
             <Grid container>
                 <img src = {product.media.source} className = {classes.imageDetail} />
             </Grid>
-         
         </Grid>
         
             
            
-        <Grid className = {classes.imageContent} item xs = {12} sm = {6} md = {6} large = {5}>
+        <Grid className = {classes.imageContent} item xs = {10} sm = {10} md = {7} large = {4}>
             <Grid container direction ="column" style = {{height:"100%"}}>
                     <div style = {{fontSize: "22px",fontWeight:"bolder",paddingBottom: "8px"}}>
                         {product.name}

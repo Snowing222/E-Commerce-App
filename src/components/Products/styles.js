@@ -12,6 +12,7 @@ export default makeStyles((theme) => ({
   },
   root: {
     flexGrow: 1,
+    paddingBottom: "25px"
   },
 
   banner:{
@@ -20,11 +21,9 @@ export default makeStyles((theme) => ({
     //  backgroundSize: theme.cover,
     //  backgroundPosition: theme.center,
     //  top: "100px",
-     height: "100%",
      width: "100%",
-     display: "block"
-     
-    
+     display: "block",
+     margin:"auto"   
   },
 
   bannerinner: {

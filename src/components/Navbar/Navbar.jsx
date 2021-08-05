@@ -15,7 +15,7 @@ const Navbar = ({totalItems}) => {
             <AppBar position = "fixed" className = {classes.appBar} color = "inherit" >
                 <Toolbar>
                     <Typography component = {Link}  to = '/' variant = "h1" className={classes.title} color = "inherit">
-                        ENROHTWAH
+                    SCENTED
                     </Typography>
                    
                     {(location.pathname !== '/checkout' || location.pathname !== '/cart') && (

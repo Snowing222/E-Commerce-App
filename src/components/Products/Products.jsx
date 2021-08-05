@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Product from './Product/Product'
 import useStyles from './styles'
-import Banner from './Banner'
+import Banner_bs from './Banner_bs'
 import YoutubeEmbed from './YoutubeEmbed'
 
 
@@ -12,7 +12,7 @@ const Products = ( {products, onAddToCart} ) => {
     return (
         <>
         <div className = {classes.toolbar} />
-        <Banner /> 
+        <Banner_bs /> 
         <div height = "600px" />
         <main className = {classes.root}> 
             <div className = {classes.content}/>
